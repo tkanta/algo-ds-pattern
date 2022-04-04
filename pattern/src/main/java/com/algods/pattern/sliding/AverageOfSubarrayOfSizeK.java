@@ -2,6 +2,11 @@ package com.algods.pattern.sliding;
 
 import java.util.Arrays;
 
+/**
+ * Given an array, find the average of all subarrays of ‘K’ contiguous elements in it.
+ * @author tarin
+ *
+ */
 public class AverageOfSubarrayOfSizeK {
 
 	public static double[] findAverage(int K, int[] arr) {

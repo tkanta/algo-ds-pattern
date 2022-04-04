@@ -4,6 +4,11 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * Given an array of positive numbers and a positive number ‘k,’ find the maximum sum of any contiguous subarray of size ‘k’
+ * @author tarin
+ *
+ */
 public class MaxSumSubArrayOfSizeK {
 
 	private static Map<String, Object> findArrAndItsMaxSum(int[] arr, int k) {
