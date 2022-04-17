@@ -19,13 +19,15 @@ public class LongestSubstringKDistinct {
 			map.put(rightChar, map.getOrDefault(rightChar, 0)+1);
 			
 			// if size greater than distinct chars, increase windowStart pointer by removing chars from left
+			// and find the largest substring with K distinct numbers by taking max length between (windowEnd-windowStart)
 			while(map.size() > K) {
 				char leftChar = str.charAt(windowStart);
 				map.put(leftChar, map.get(leftChar)-1);
 				if(map.get(leftChar) == 0) {
 					map.remove(leftChar);
 				}
-				windowStart++;
+				//increase as the duplicate char are removed from map
+				windowStart++; 
 			}
 			
 			maxLength = Math.max(maxLength, windowEnd-windowStart+1);
