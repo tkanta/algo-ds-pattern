@@ -5,6 +5,7 @@ import java.util.PriorityQueue;
 public class SumOfElements {
 	
 	/**
+	 *Given an array, find the sum of all numbers between the K1’th and K2’th smallest elements of that array.
 	 * Time complexity O(N*logN)
 	 * Space Complexity O(N)
 	 * @param nums

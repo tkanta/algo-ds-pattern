@@ -5,6 +5,7 @@ import java.util.Map;
 import java.util.PriorityQueue;
 
 /**
+ * Given a string, sort it based on the decreasing frequency of its characters.
  * O(N*logN) 
  * @author tarin
  *

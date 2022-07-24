@@ -6,6 +6,7 @@ import java.util.PriorityQueue;
 
 
 /**
+ * Given an array of points in a 2D plane, find ‘K’ closest points to the origin.
  * The Euclidean distance of a point P(x,y) from the origin can be calculated through the following formula:
 	sqrt{x^2 + y^2}
 

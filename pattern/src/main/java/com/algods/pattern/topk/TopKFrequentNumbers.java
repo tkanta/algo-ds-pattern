@@ -9,6 +9,7 @@ import java.util.Map;
 import java.util.PriorityQueue;
 
 /**
+ * Given an unsorted array of numbers, find the top ‘K’ frequently occurring numbers in it.
  * Find Top 'K' Frequent Numbers
  * Time Complexity O(N+N∗logK)
  * @author tarin

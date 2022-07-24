@@ -2,6 +2,11 @@ package com.algods.pattern.topk;
 
 import java.util.PriorityQueue;
 
+/**
+ * Given an unsorted array of numbers, find Kth smallest number in it.
+ * @author tarin
+ *
+ */
 public class KthSmallestNumber {
 	
 	private static int findKthSmallestNumber(int[] nums, int k) {

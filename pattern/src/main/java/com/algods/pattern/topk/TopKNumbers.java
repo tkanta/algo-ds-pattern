@@ -1,14 +1,16 @@
 package com.algods.pattern.topk;
 
-import java.time.Duration;
-import java.time.Instant;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 import java.util.PriorityQueue;
-import java.util.stream.IntStream;
 
+/**
+ * Given an unsorted array of numbers, find the ‘K’ largest numbers in it.
+ * @author tarin
+ *
+ */
 public class TopKNumbers {
 
 	//==================== self solution ======================

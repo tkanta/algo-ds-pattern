@@ -3,7 +3,12 @@ package com.algods.pattern.topk;
 import java.util.PriorityQueue;
 
 /**
- * 	Time Complexity O(N*logN) 
+ * Given ‘N’ ropes with different lengths, we need to connect these ropes into
+ * one big rope with minimum cost. The cost of connecting two ropes is equal to
+ * the sum of their lengths. 
+ * 
+ * Time Complexity O(N*logN)
+ * 
  * @author tarin
  *
  */
