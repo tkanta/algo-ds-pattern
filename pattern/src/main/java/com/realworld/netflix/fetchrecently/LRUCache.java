@@ -3,6 +3,28 @@ package com.realworld.netflix.fetchrecently;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * A doubly linked list provides an ideal way of maintaining ordered elements.
+ * We can keep the most recently accessed item at the tail. But when a recently
+ * watched item is accessed again, we’ll move it to the tail of the linked list.
+ * This will require searching for an element in the linked list, which is
+ * expensive. To fix this, we can use a hash map to store the pointers of the
+ * linked list elements.
+ * 
+ * Here’s how we implement the feature:
+ * 
+ * If the element exists in the hashmap, our first step is to move the accessed
+ * element to the tail of the linked list.
+ * 
+ * If the data structure is at its capacity, remove the element at the head of
+ * the linked list and the Hash Map. Then, we add the new element at the tail of
+ * the linked list and in the Hash Map.
+ * 
+ * Finally, we retrieve the element and return.
+ * 
+ * @author tarin
+ *
+ */
 public class LRUCache {
 	int capacity;
 	Map<Integer,LinkedListNode> cache;
