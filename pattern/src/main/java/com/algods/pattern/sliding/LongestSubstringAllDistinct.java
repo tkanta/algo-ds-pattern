@@ -3,9 +3,12 @@ package com.algods.pattern.sliding;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * Find the length of a contiguous distinct longest string
+ * @author tarin
+ *
+ */
 public class LongestSubstringAllDistinct {
-	
-	
 	
 	/**
 	 * Self Solution
@@ -13,26 +16,36 @@ public class LongestSubstringAllDistinct {
 	 * @return
 	 */
 	private static int findLongestOfAllDistinct(String str) {
+
 		int maxLen = 0, distinctLength=0;
 		
 		Map<Character, Integer> map = new HashMap<>();
-		
+		StringBuilder distStr = new StringBuilder();
+		String finalStr = "";
 		for(int wEnd=0; wEnd < str.length(); wEnd++) {
 			char c = str.charAt(wEnd);
 			map.put(c, map.getOrDefault(c, 0)+1);
 			
-			//If duplicate character appear, start with distinct length from 1
+			//If duplicate character appear, start again with distinct length from 1
 			if(map.get(c) > 1) {
 				map.clear();
 				distinctLength = 1; 
+				distStr.setLength(0);
 			}else {
 				++distinctLength; // contiguous distinct length
 			}
+			distStr.append(c);
 			
-			// remember contiguous max length till now
-			maxLen = Math.max(maxLen, distinctLength);
+			// capture the string of max length
+			//remember contiguous max length till now
+			if(maxLen < distinctLength) {
+				finalStr = distStr.toString();
+				maxLen = distinctLength;
+			}
+				
 		}
 		
+		System.out.println("Longest substring : "+ finalStr);
 		return maxLen;
 	}
 	
@@ -69,8 +82,8 @@ public class LongestSubstringAllDistinct {
 	public static void main(String[] args) {
 		
 		String s = "aabccbb"; // "abccde"; // "abbbb"; // "ssdegrr"; // 
-//		System.out.println("Length of the longest substring: " +findLongestOfAllDistinct("aabccbb"));
-//		System.out.println("Length of the longest substring: " +findLongestOfAllDistinct("abbbb"));
+		System.out.println("Length of the longest substring: " +findLongestOfAllDistinct("aabccbb"));
+		System.out.println("Length of the longest substring: " +findLongestOfAllDistinct("abbbb"));
 		System.out.println("Length of the longest substring: " +findLongestOfAllDistinct("abccaadefg"));
 		
 		System.out.println("-----------------------");

@@ -70,7 +70,7 @@ class LFUCache2 {
 		if (this.size == this.capacity) {
 			this.keyDict.remove(this.freqDict.get(this.minFreq).head.key);
 			this.freqDict.get(this.minFreq).deleteNode(this.freqDict.get(this.minFreq).head);
-			if (this.freqDict.get(this.minFreq) == null) {
+			if (this.freqDict.get(this.minFreq).head == null) {
 				this.freqDict.remove(this.minFreq);
 			}
 			this.size -= 1;

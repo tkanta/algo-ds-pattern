@@ -59,7 +59,7 @@ public class TopKFrequentNumbers {
 	 * Educative test
 	 */
 	public static void eduTest() {
-		List<Integer> result = TopKFrequentNumbers.findTopKFrequentNumbers(new int[] { 1, 3, 5, 12, 11, 12, 11 }, 2);
+		List<Integer> result = TopKFrequentNumbers.findTopKFrequentNumbers(new int[] { 1, 3, 5, 12, 11, 12, 11, 12 }, 2);
 	    System.out.println("Here are the K frequent numbers: " + result);
 
 	    result = TopKFrequentNumbers.findTopKFrequentNumbers(new int[] { 5,5,5, 12, 11, 3, 11, 14, 14, 14 }, 2);
@@ -75,7 +75,7 @@ public class TopKFrequentNumbers {
 		Instant start = Instant.now();
 		eduTest();
 		Instant end = Instant.now();
-		System.out.println(Duration.between(start, end).toMillis());
+		System.out.println("Time taken in mili second : "+Duration.between(start, end).toMillis());
 	}
 	
 	
